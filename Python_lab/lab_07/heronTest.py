@@ -1,5 +1,4 @@
-import heron_modul;
-
+from lab_07 import heron_modul
 
 heron= heron_modul;
 

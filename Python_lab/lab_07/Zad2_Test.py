@@ -1,15 +1,5 @@
 
-from Zad2 import Drzewo;
-from Zad2 import MiaraProsta;
-from Zad2 import MiaraPotegowa;
-
-
-
-
-
-
-
-
+from lab_07.Zad2 import Drzewo;
 
 #wprowadzanie ręczne
 drzewo_input= eval(input());

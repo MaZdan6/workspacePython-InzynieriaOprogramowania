@@ -41,7 +41,7 @@ class Drzewo:
         wezel1= wierzcholek1
         wezel2= wierzcholek2;
 
-        if miara == "prosta ":
+        if miara == 'prosta':
                 # print(miara,wezel1,wezel2);
                 nadwezly11= self.pobierz_nadkoncepty(wezel1);
                 nadwezly22= self.pobierz_nadkoncepty(wezel2);
@@ -49,7 +49,7 @@ class Drzewo:
                 odleglosc= self.miaraProsta.licz_odleglosc(nadwezly11, nadwezly2= nadwezly22);
                 return  odleglosc;
 
-        elif miara== "potegowa ":
+        elif miara== 'potegowa':
             #print(miara, wezel1, wezel2);
 
             nadwezly1= self.pobierz_nadkoncepty(wezel1);
@@ -178,7 +178,7 @@ print(outputLista);
 '''
 przykładowe wejscie dla zad 2
 [( 'F', 'B'), ('B', 'A'), ('B', 'D'), ('D', 'C'), ('D', 'E'), ('F', 'G'), ('G', 'I'), ('I', 'H')]
-[( 'prosta ', 'C', 'G'), ('prosta ', 'G', 'C'), ('potegowa ', 'G', 'C')]
+[( 'prosta', 'C', 'G'), ('prosta', 'G', 'C'), ('potegowa', 'G', 'C')]
 
 wyjscie:
 [4, 4, 8]
