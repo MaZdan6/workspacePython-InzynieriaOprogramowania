@@ -1,0 +1,59 @@
+13.1
+import pymysql
+
+connection = pymysql.connect(host=input(),
+port = int(input()), user=input(), passwd=input(),
+database=input())
+cursor = connection.cursor()
+
+
+cursor.execute('select * from polaczenia;')
+
+suma=0
+for i in cursor:
+
+suma+=i[3]
+
+print(suma)
+
+
+13.2
+
+import pymysql
+import datetime
+
+connection = pymysql.connect(host=input(),
+port = int(input()), user=input(), passwd=input(),
+database=input())
+
+
+id_nadawcy=eval(input())
+id_odbiorcy=eval(input())
+
+lista_nad=[]
+max_odb=[]
+
+cursor = connection.cursor()
+
+for nadawca in id_nadawcy:
+    cursor.execute('select * from polaczenia;')
+    suma=0
+    for i in cursor:
+        if i[0]==nadawca:
+        suma+=i[3]
+        lista_nad.append(suma)
+
+for odbiorca in id_odbiorcy:
+    cursor.execute('select * from polaczenia;')
+    lista_odb=[]
+
+    for i in cursor:
+        if i[1]==odbiorca:
+        lista_odb.append(i[2].isoformat())
+   max_odb.append(max(lista_odb))
+
+suma_polaczen=tuple(lista_nad)
+ostatnie_pol=tuple(max_odb)
+
+print(suma_polaczen)
+print(ostatnie_pol)
